@@ -132,15 +132,15 @@ export default function Footer() {
       <div className="border-t border-blue-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-blue-300/50">
-            © 2025 RAG MARBLES. All rights reserved. · Est. 2020 · Prayagraj, India
+            © 2020–{new Date().getFullYear()} RAG MARBLES. All rights reserved. · Prayagraj, India
           </p>
           <div className="flex items-center gap-4">
             <span className="text-xs text-blue-300/40">Developed by -AP</span>
             <Link
-              href="/"
+              href="#top"
               className="text-xs text-blue-300/40 hover:text-blue-200/70 transition-colors"
             >
-              Privacy Policy
+              Back to top
             </Link>
           </div>
         </div>

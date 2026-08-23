@@ -62,7 +62,11 @@ export default function BrandsCarousel() {
   }, [paused, TOTAL_ORIGINAL]);
 
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 bg-white overflow-hidden" aria-label="Partner Brands">
+    <section
+      ref={sectionRef}
+      className="py-24 lg:py-32 bg-white overflow-hidden"
+      aria-label="Partner Brands"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-14">
         <div
           className={`text-center transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}

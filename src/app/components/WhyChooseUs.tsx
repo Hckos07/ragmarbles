@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import Icon from '@/components/ui/AppIcon';
-import AppImage from '@/components/ui/AppImage';
 
 const reasons = [
   {

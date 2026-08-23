@@ -1,19 +1,23 @@
 import { MongoClient } from 'mongodb';
 
-const uri = process.env.MONGODB_URI;
-
-if (!uri) {
-  throw new Error('Missing MONGODB_URI environment variable.');
-}
-
 const globalForMongo = global as typeof globalThis & {
   mongoClientPromise?: Promise<MongoClient>;
 };
 
-const client = new MongoClient(uri);
+/**
+ * Connect only when an enquiry is submitted. Creating the connection at module
+ * load time makes Next.js try to reach MongoDB while it builds static pages.
+ */
+export function getMongoClient() {
+  const uri = process.env.MONGODB_URI;
 
-export const mongoClientPromise = globalForMongo.mongoClientPromise ?? client.connect();
+  if (!uri) {
+    throw new Error('MONGODB_URI is not configured.');
+  }
 
-if (process.env.NODE_ENV !== 'production') {
-  globalForMongo.mongoClientPromise = mongoClientPromise;
+  if (!globalForMongo.mongoClientPromise) {
+    globalForMongo.mongoClientPromise = new MongoClient(uri).connect();
+  }
+
+  return globalForMongo.mongoClientPromise;
 }

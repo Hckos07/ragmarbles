@@ -52,7 +52,11 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
           {/* Logo */}
-          <Link href="/" className="flex items-center flex-shrink-0 group" aria-label="RAG MARBLES home">
+          <Link
+            href="/"
+            className="flex items-center flex-shrink-0 group"
+            aria-label="RAG MARBLES home"
+          >
             <div className="w-[132px] h-12 sm:w-[160px] sm:h-14 overflow-hidden flex items-center justify-center">
               <Image
                 src="/assets/images/raglogo.png"

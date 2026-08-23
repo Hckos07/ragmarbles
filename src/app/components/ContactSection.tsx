@@ -211,6 +211,8 @@ export default function ContactSection() {
                         errors.name ? 'border-red-400' : 'border-blue-100 hover:border-blue-300'
                       }`}
                       autoComplete="name"
+                      maxLength={100}
+                      required
                     />
                     {errors.name && (
                       <p className="text-xs text-red-500 mt-1.5 font-medium">{errors.name}</p>
@@ -233,6 +235,8 @@ export default function ContactSection() {
                       }`}
                       autoComplete="tel"
                       maxLength={10}
+                      inputMode="numeric"
+                      required
                     />
                     {errors.phone && (
                       <p className="text-xs text-red-500 mt-1.5 font-medium">{errors.phone}</p>
@@ -254,6 +258,7 @@ export default function ContactSection() {
                         errors.email ? 'border-red-400' : 'border-blue-100 hover:border-blue-300'
                       }`}
                       autoComplete="email"
+                      required
                     />
                     {errors.email && (
                       <p className="text-xs text-red-500 mt-1.5 font-medium">{errors.email}</p>
@@ -274,6 +279,8 @@ export default function ContactSection() {
                       className={`w-full px-5 py-4 rounded-xl border-2 text-base text-blue-900 bg-blue-50/50 placeholder:text-blue-400/60 focus:outline-none focus:ring-0 focus:border-blue-500 transition-colors resize-none ${
                         errors.message ? 'border-red-400' : 'border-blue-100 hover:border-blue-300'
                       }`}
+                      maxLength={2000}
+                      required
                     />
                     {errors.message && (
                       <p className="text-xs text-red-500 mt-1.5 font-medium">{errors.message}</p>
@@ -399,7 +406,7 @@ export default function ContactSection() {
             <div className="rounded-3xl overflow-hidden border border-blue-100 shadow-lg h-[220px] sm:h-[280px] lg:h-[320px]">
               <iframe
                 title="RAG MARBLES Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.5!2d81.8974!3d25.4358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acb3b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sJhalwa%2C+Prayagraj%2C+Uttar+Pradesh!5e0!3m2!1sen!2sin!4v1692000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps?q=A-2%2F47%20Devghat%2C%20Jhalwa%2C%20Prayagraj&output=embed"
                 className="block w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"

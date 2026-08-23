@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="top">
         <HeroSection />
         <AboutSection />
         <ProductsSection />
