@@ -4,7 +4,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const brandSlots = [
-  { id: 1, label: 'Birlahill Pipes', src: '/assets/images/birlahilpipeslogo.png' },
+  { id: 1, label: 'Sintex HotX', src: '/assets/images/sintexhotx.png' },
   { id: 2, label: 'Nirali', src: '/assets/images/niralilogo.jpeg' },
   { id: 3, label: 'Sintex', src: '/assets/images/sintexlogo.png' },
   { id: 4, label: 'Astral', src: '/assets/images/astralpipes.jpeg' },

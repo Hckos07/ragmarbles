@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Icon from '@/components/ui/AppIcon';
 
 const PHONE_NUMBER = '+919120125913';
+const ALTERNATE_PHONE_NUMBER = '+919120125917';
 const WHATSAPP_NUMBER = '919120125913';
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hi, I'm interested in your plumbing and sanitary products"
@@ -32,6 +33,13 @@ const contactDetails = [
     external: false,
   },
   {
+    icon: 'PhoneIcon',
+    label: 'Call Us (Alternate)',
+    value: '+91 9120125917',
+    href: `tel:${ALTERNATE_PHONE_NUMBER}`,
+    external: false,
+  },
+  {
     icon: 'ChatBubbleLeftEllipsisIcon',
     label: 'WhatsApp',
     value: '9120125913',
@@ -41,7 +49,7 @@ const contactDetails = [
   {
     icon: 'ClockIcon',
     label: 'Working Hours',
-    value: 'Mon–Sat: 9:00 AM – 8:00 PM · Sunday: Closed',
+    value: 'Mon, Wed–Sun: 10:00 AM – 8:00 PM · Tuesday: Closed',
     href: undefined,
     external: false,
   },

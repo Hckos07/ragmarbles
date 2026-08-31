@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Icon from '@/components/ui/AppIcon';
 
 const PHONE_NUMBER = '+919120125913';
+const ALTERNATE_PHONE_NUMBER = '+919120125917';
 const WHATSAPP_NUMBER = '919120125913';
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hi, I'm interested in your plumbing and sanitary products"
@@ -65,6 +66,15 @@ export default function Footer() {
                   <Icon name="PhoneIcon" size={16} className="text-blue-300" variant="solid" />
                 </div>
                 <span className="text-sm font-medium">+91 9120125913</span>
+              </a>
+              <a
+                href={`tel:${ALTERNATE_PHONE_NUMBER}`}
+                className="flex items-center gap-3 text-blue-200/70 hover:text-white transition-colors group"
+              >
+                <div className="w-9 h-9 rounded-lg bg-blue-800/50 flex items-center justify-center group-hover:bg-blue-700/60 transition-colors">
+                  <Icon name="PhoneIcon" size={16} className="text-blue-300" variant="solid" />
+                </div>
+                <span className="text-sm font-medium">+91 9120125917</span>
               </a>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}

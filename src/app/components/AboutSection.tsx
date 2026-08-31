@@ -12,8 +12,8 @@ const highlights = [
   },
   {
     icon: 'ClockIcon',
-    title: 'Open Mon–Sat, 9 AM – 8 PM',
-    desc: 'Six days a week for your convenience. Call ahead for Sunday visits.',
+    title: 'Open 10 AM – 8 PM',
+    desc: 'Open Monday and Wednesday–Sunday. Tuesday is closed.',
   },
   {
     icon: 'ShieldCheckIcon',

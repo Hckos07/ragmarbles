@@ -2,6 +2,18 @@
 
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
+import Icon from '@/components/ui/AppIcon';
+
+const catalogs = [
+  {
+    label: 'Jaguar Catalogue',
+    href: 'https://drive.google.com/file/d/1spWanlRXBm4fNAbzYAjZVMIPwGoWYs7r/view?usp=sharing',
+  },
+  {
+    label: 'Essco Catalogue',
+    href: 'https://drive.google.com/file/d/13kZXIDc7Lp7hGaoOMhjBaHQy8PqXqn6N/view?usp=sharing',
+  },
+];
 
 const products = [
   {
@@ -9,8 +21,8 @@ const products = [
     name: 'Taps & Faucets',
     desc: 'Chrome, brass & matte finish taps for kitchen and bathroom',
     tag: 'Best Seller',
-    src: 'https://images.unsplash.com/photo-1585247411924-f1c8286ce3a1',
-    alt: 'Polished chrome kitchen tap mounted on white sink, bright studio lighting, clean minimal product shot',
+    src: '/assets/images/jaquar-basin-mixer.jpg',
+    alt: 'Jaquar basin mixer tap from the Jaquar catalogue',
     colSpan: 'md:col-span-1',
     rowSpan: 'md:row-span-2',
     height: 'h-[320px] md:h-full',
@@ -20,8 +32,8 @@ const products = [
     name: 'Sinks & Wash Basins',
     desc: 'Ceramic, stainless steel & designer wash basins',
     tag: 'Popular',
-    src: 'https://img.rocket.new/generatedImages/rocket_gen_img_1d7f87fd3-1767112895068.png',
-    alt: 'White ceramic wash basin with chrome tap in bright modern bathroom, airy well-lit space',
+    src: '/assets/images/essco-washbasin.jpg',
+    alt: 'Essco ceramic wash basin with chrome tap from the Essco catalogue',
     colSpan: 'md:col-span-1',
     rowSpan: '',
     height: 'h-[240px]',
@@ -42,8 +54,8 @@ const products = [
     name: 'Showers & Panels',
     desc: 'Rain showers, hand showers & complete shower systems',
     tag: 'Premium',
-    src: 'https://img.rocket.new/generatedImages/rocket_gen_img_13c4f033d-1768399496108.png',
-    alt: 'Modern rainfall shower head in bright white tiled bathroom, water droplets, clean airy atmosphere',
+    src: '/assets/images/jaquar-rain-shower.jpg',
+    alt: 'Jaquar rain shower from the Jaquar catalogue',
     colSpan: 'md:col-span-1',
     rowSpan: 'md:row-span-2',
     height: 'h-[320px] md:h-full',
@@ -53,8 +65,8 @@ const products = [
     name: 'Bathroom Fittings',
     desc: 'Towel rails, soap dishes, hooks & accessories',
     tag: '',
-    src: 'https://img.rocket.new/generatedImages/rocket_gen_img_1f4afb422-1766511782843.png',
-    alt: 'Chrome bathroom accessories towel rail and soap holder mounted on clean white tiles, bright bathroom',
+    src: '/assets/images/jaquar-bathroom-fittings.jpg',
+    alt: 'Jaquar bathroom fittings in a completed bathroom from the Jaquar catalogue',
     colSpan: 'md:col-span-2',
     rowSpan: '',
     height: 'h-[240px]',
@@ -64,8 +76,8 @@ const products = [
     name: 'Sanitary Ware',
     desc: 'WC suites, cisterns & bidets from top brands',
     tag: 'New Arrivals',
-    src: 'https://img.rocket.new/generatedImages/rocket_gen_img_1c0f93a3c-1772188531711.png',
-    alt: 'White ceramic toilet and cistern in clean modern bathroom with bright natural light',
+    src: '/assets/images/jaquar-sanitaryware.jpg',
+    alt: 'Jaquar sanitaryware in a completed bathroom from the Jaquar catalogue',
     colSpan: 'md:col-span-2',
     rowSpan: '',
     height: 'h-[240px]',
@@ -75,8 +87,8 @@ const products = [
     name: 'Water Heaters',
     desc: 'Instant & storage geysers for all capacities',
     tag: '',
-    src: 'https://img.rocket.new/generatedImages/rocket_gen_img_1f38885cf-1772284009999.png',
-    alt: 'White electric water heater geyser mounted on white bathroom wall, bright clean space',
+    src: '/assets/images/jaquar-water-heaters.jpg',
+    alt: 'Jaquar water heaters from the Jaquar catalogue',
     colSpan: 'md:col-span-1',
     rowSpan: '',
     height: 'h-[240px]',
@@ -86,8 +98,8 @@ const products = [
     name: 'Basin Mixers',
     desc: 'Single-lever & thermostatic basin mixer taps',
     tag: 'Trending',
-    src: 'https://images.unsplash.com/photo-1644916925497-109cbd92087d',
-    alt: 'Brushed gold basin mixer tap on white marble countertop, bright studio product photography',
+    src: '/assets/images/jaquar-tap.jpg',
+    alt: 'Jaquar single lever basin mixer tap from the Jaquar catalogue',
     colSpan: 'md:col-span-1',
     rowSpan: '',
     height: 'h-[240px]',
@@ -123,7 +135,7 @@ export default function ProductsSection() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+        <div className="mb-10">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
               <span className="w-2 h-2 rounded-full bg-primary" />
@@ -136,12 +148,20 @@ export default function ProductsSection() {
               <br />
               <span className="text-gradient">All Under One Roof</span>
             </h2>
-          </div>
-          <div className="max-w-md">
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Everything you need for plumbing and bathrooms — from everyday fittings to premium
-              European bathroom suites. Visit us or call to check availability.
-            </p>
+            <div className="flex flex-wrap gap-3 mt-6">
+              {catalogs.map((catalog) => (
+                <a
+                  key={catalog.label}
+                  href={catalog.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors"
+                >
+                  <Icon name="ArrowDownTrayIcon" size={18} />
+                  {catalog.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
