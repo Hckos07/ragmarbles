@@ -170,8 +170,8 @@ export default function HeroSection() {
           >
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-blue-100">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_1d5bfdf08-1776256928913.png"
-                alt="Modern luxury bathroom showroom with gleaming white sanitary ware, polished chrome taps and fittings, bright natural lighting, premium display"
+                src="/assets/images/shopimage.jpg"
+                alt="RAG MARBLES shop in Prayagraj"
                 width={800}
                 height={700}
                 priority
@@ -193,12 +193,12 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Floating badge */}
+            {/* Floating badge
             <div className="absolute -bottom-6 -left-4 sm:left-8 bg-gradient-to-br from-blue-600 to-sky-500 text-white rounded-2xl px-6 py-5 shadow-xl shadow-blue-500/30">
               <p className="text-4xl font-black leading-none">Est.</p>
               <p className="text-4xl font-black leading-none">2020</p>
               <p className="text-sm font-semibold opacity-80 mt-1">Prayagraj</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

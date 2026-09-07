@@ -32,8 +32,8 @@ const products = [
     name: 'Sinks & Wash Basins',
     desc: 'Ceramic, stainless steel & designer wash basins',
     tag: 'Popular',
-    src: '/assets/images/essco-washbasin.jpg',
-    alt: 'Essco ceramic wash basin with chrome tap from the Essco catalogue',
+    src: '/assets/images/jaguarbasin.png',
+    alt: 'Jaquar wash basin',
     colSpan: 'md:col-span-1',
     rowSpan: '',
     height: 'h-[240px]',
@@ -43,8 +43,8 @@ const products = [
     name: 'Pipes & Fittings',
     desc: 'CPVC, PVC & PPR pipes for all plumbing needs',
     tag: '',
-    src: 'https://img.rocket.new/generatedImages/rocket_gen_img_1e6e5a13f-1772184751163.png',
-    alt: 'Stacked white PVC and orange CPVC pipes in a hardware store, daylight, organized rows',
+    src: '/assets/images/sintexpipe.jpg',
+    alt: 'Sintex plumbing pipes and fittings',
     colSpan: 'md:col-span-1',
     rowSpan: '',
     height: 'h-[240px]',
@@ -76,8 +76,8 @@ const products = [
     name: 'Sanitary Ware',
     desc: 'WC suites, cisterns & bidets from top brands',
     tag: 'New Arrivals',
-    src: '/assets/images/jaquar-sanitaryware.jpg',
-    alt: 'Jaquar sanitaryware in a completed bathroom from the Jaquar catalogue',
+    src: '/assets/images/nav_bath_img.jpg',
+    alt: 'Bathroom sanitaryware display',
     colSpan: 'md:col-span-2',
     rowSpan: '',
     height: 'h-[240px]',
@@ -89,18 +89,7 @@ const products = [
     tag: '',
     src: '/assets/images/jaquar-water-heaters.jpg',
     alt: 'Jaquar water heaters from the Jaquar catalogue',
-    colSpan: 'md:col-span-1',
-    rowSpan: '',
-    height: 'h-[240px]',
-  },
-  {
-    id: 'basin-mixers',
-    name: 'Basin Mixers',
-    desc: 'Single-lever & thermostatic basin mixer taps',
-    tag: 'Trending',
-    src: '/assets/images/jaquar-tap.jpg',
-    alt: 'Jaquar single lever basin mixer tap from the Jaquar catalogue',
-    colSpan: 'md:col-span-1',
+    colSpan: 'md:col-span-2',
     rowSpan: '',
     height: 'h-[240px]',
   },
@@ -187,9 +176,6 @@ export default function ProductsSection() {
           </div>
           <div className={`${products[6].colSpan} reveal-scale`}>
             <ProductCard product={products[6]} />
-          </div>
-          <div className={`${products[7].colSpan} reveal-scale`}>
-            <ProductCard product={products[7]} />
           </div>
         </div>
 
